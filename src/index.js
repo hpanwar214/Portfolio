@@ -1,6 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import App from './components/App'
 import './index.css'
+import { createBrowserHistory  } from 'history'
+import { Router,Switch, Route} from 'react-router-dom'
+import Jokes from './components/Jokes'
+import Header from './components/Header'
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(
+  <Router history={createBrowserHistory()}>
+    <Switch>
+        <Route exact path='/' render = {() => <Header><App/></Header>}/>
+        <Route exact path='/jokes' render= {() => <Header><Jokes/></Header>}/> 
+    </Switch>
+  </Router>
+  ,document.getElementById("root"));

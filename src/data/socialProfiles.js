@@ -6,7 +6,7 @@ import linkedin_icon from '../assets/linkedin_icon.png'
 const SOCIAL_PROFILES = [
     {
         id : 1,
-        link : "mailTo ; harshit.panwar@nextuple.com",
+        link : "mailTo : harshit.panwar@nextuple.com",
         image : email_icon
     },
     {
